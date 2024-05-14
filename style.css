@@ -1,0 +1,222 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #07182E;
+}
+.container {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    height: 100vh; /* Hace que ocupe todo el alto de la ventana */
+}
+
+/* Aqui inicia el div de el logo*/
+.full-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px; /* Ocupa toda la altura de la ventana */
+    margin-bottom: 30px;
+    flex-direction: column; /* Alineación vertical */
+   
+}
+.text1{
+    font-family: monospace;
+    color: #ffffff;
+    
+}
+
+.img {
+    max-width: 150px; /* Limita el ancho */
+    height: 100%; /* Ocupa la mitad de la altura del contenedor */
+    max-height: 400px; /* Limita la altura máxima */
+    object-fit: contain; /* Asegura que la imagen mantenga proporciones */
+   
+    
+}
+.note {
+    display: flex;
+    align-items: center; /* Centra el icono y texto verticalmente */
+    font-size: 14px; /* Tamaño del texto */
+    color: white; /* Color del texto */
+    margin-bottom: 10px; /* Espacio debajo de la nota */
+    z-index: 1;
+    font-family: monospace;
+
+}
+
+.icon {
+    font-size: 20px; /* Tamaño del icono */
+    color: red; /* Color para el icono de exclamación */
+    margin-right: 8px; /* Espacio entre el icono y el texto */
+    z-index: 1;
+}
+
+button {
+  font-family: monospace;
+  font-size: 1.5rem;
+  color: #FAFAFA;
+  text-transform: uppercase;
+  padding: 5px 5px;
+  border-radius: 5px;
+  border: 2px solid #FAFAFA;
+  background: #252525;
+  box-shadow: 3px 3px #fafafa;
+  cursor: pointer;
+  margin: 20px 0px;
+  z-index: 1;
+  }
+  
+  button:active {
+    box-shadow: none;
+    transform: translate(3px, 3px);
+    z-index: 1;
+  }
+
+  /*---------- Card ----------*/
+
+  .card {
+    width: 630px;
+    height: auto; /* Ajusta la altura automáticamente para acomodar el contenido */
+    background: #07182E;
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Para alinear elementos verticalmente */
+    justify-content: center; /* Para centrar verticalmente */
+    align-items: center; /* Para centrar horizontalmente */
+    padding: 60px; /* Añade espacio interno para que los elementos no toquen los bordes */
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 20px;
+  }
+  
+    .card::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+    height: 290%;
+    animation: rotBGimg 3s linear infinite;
+    transition: all 0.2s linear;
+  }
+  .textarea {
+    width: 90%; /* Hace que el textarea ocupe todo el ancho del contenedor */
+    padding: 12px 16px;
+    border-radius: 8px;
+    resize: none;
+    color: #fff;
+    border: 1px solid #414141;
+    background-color: transparent;
+    font-family: monospace;
+
+    z-index: 1;
+    margin-bottom: 20px; /* Añade espacio entre el textarea y los botones */
+}
+.textarea::placeholder {
+    color: white; /* Color del placeholder */
+    opacity: 1; /* Puedes ajustar la opacidad para hacer el placeholder más o menos visible */
+    text-align: center; /* Centra horizontalmente */
+    font-size: 20px;
+}
+.button-container {
+    display: flex; /* Hace que los botones se alineen horizontalmente */
+    justify-content: center; /* Espacio igual entre botones */
+    width: 100%; /* Asegura que ocupa todo el ancho del contenedor */
+}
+
+  @keyframes rotBGimg {
+    from {
+      transform: rotate(0deg);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .card::after {
+    content: '';
+    position: absolute;
+    background: #07182E;
+    
+    inset: 5px;
+    border-radius: 5px;
+  }  
+  /* .card:hover:before {
+    background-image: linear-gradient(180deg, rgb(81, 255, 0), purple);
+    animation: rotBGimg 3.5s linear infinite;
+  } */
+  .footer {
+    background: #252525; /* Color de fondo del footer */
+    color: #c5c2ea; /* Color del texto */
+    padding: 20px; /* Espacio interno */
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    flex-direction: column;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center; /* Espacio igual entre secciones */
+    width: 80%; /* Ancho del contenido dentro del footer */
+}
+
+.contact-info {
+    font-size: 14px; /* Tamaño del texto */
+    font-family: monospace;
+
+}
+
+.social-links {
+    display: flex; /* Alinea horizontalmente */
+    gap: 20px; /* Espacio entre enlaces */
+    margin: 14px;
+    
+}
+
+.social-links a {
+    font-family: monospace;
+
+    color: #FAFAFA; /* Color de los enlaces */
+    text-decoration: none; /* Sin subrayado */
+}
+
+.social-links a:hover {
+    text-decoration: underline; /* Efecto al pasar el ratón */
+    font-family: monospace;
+    color: aqua;
+
+}
+.h2{
+    font-size: 2rem; /* Tamaño relativo */
+    text-align: center; /* Centra el texto */
+    margin-top: 1rem; /* Margen relativo */
+    
+}
+
+/* Cambios para pantallas pequeñas */
+@media (max-width: 600px) {
+    h2 {
+        font-size: 0.9rem; /* Tamaño más pequeño */
+        text-align: left; /* Alinea a la izquierda */
+        margin-top: 0.5rem; /* Menor margen */
+    }
+    
+}
+
+
+/* Cambios para pantallas grandes */
+@media (min-width: 1200px) {
+    h2 {
+        font-size: 2.5rem; /* Tamaño más grande */
+        text-align: center; /* Centra el texto */
+        margin-top: 1.5rem; /* Mayor margen */
+    }
+}
+
+  
+  
+ 
